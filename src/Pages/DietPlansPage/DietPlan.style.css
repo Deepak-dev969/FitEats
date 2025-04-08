@@ -1,7 +1,7 @@
 #diet-plan-wrapper {
   width: 100%;
   padding: 0vw 5vw;
-  background-color: #eaefee;
+  background-color: #111;
 }
 .Diet-Plan-content {
   width: 100%;
@@ -10,7 +10,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 0vw 0vw 0vw 6vw;
-  background-color: #eaefee;
+  background-color: #111;
 }
 
 .hero-section-para {
@@ -24,10 +24,11 @@
   font-family: "Segoe UI";
   font-weight: 700;
   font-size: 2.8em;
+  color: #fff;
 }
 .Diet-Plan-content p {
   font-family: "Segoe UI";
-  color: #4b3a41;
+  color: #fff;
   font-weight: 400;
   line-height: 1.8em;
 }
@@ -51,10 +52,12 @@
   font-weight: 700;
   font-size: 1.8em;
   text-align: center;
+  color: #fff;
 }
 .Diet-Plan-Section ul li {
   font-family: "Segoe UI";
   line-height: 2em;
+  color: #fff;
 }
 .BtndDiv {
   display: flex;
@@ -67,12 +70,15 @@
 #Learn-More-Btn {
   width: 100%;
   border: #48a6a7 1px solid;
-  color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+
   padding: 0.5vw 1.7vw;
   transition: ease-in-out 0.3s;
 }
 #Learn-More-Btn:hover {
-  background-color: #41797a;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
   color: #fff;
 }
 #Learn-More-Btn:active {
@@ -80,13 +86,13 @@
 }
 #Start-Free-Btn {
   width: 100%;
-  background-color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
   color: #ffffff;
   padding: 0.5vw 1.7vw;
   transition: ease-in-out 0.3s;
 }
 #Start-Free-Btn:hover {
-  background-color: #41797a;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
   color: #fff;
 }
 #Start-Free-Btn:active {
@@ -99,7 +105,7 @@
   text-align: center;
 }
 .heading {
-  background-color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
   color: #fff;
   padding: 20px;
   font-size: 24px;

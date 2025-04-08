@@ -81,7 +81,12 @@ export default function BrowseFoods() {
         }}
       >
         <div className="Heading-Browse-foods">
-          <Typography variant="h4" fontWeight="bold" gutterBottom>
+          <Typography
+            variant="h4"
+            fontWeight="bold"
+            gutterBottom
+            sx={{ color: "#fff" }}
+          >
             Browse Meals
           </Typography>
 
@@ -99,7 +104,7 @@ export default function BrowseFoods() {
               onChange={(e) => setCategory(e.target.value)}
               variant="outlined"
               size="small"
-              sx={{ minWidth: 150 }}
+              sx={{ minWidth: 150, color: "#fff", borderColor: "#fff" }}
             >
               <MenuItem value="All Meals">All Meals</MenuItem>
               {[...new Set(meals.map((m) => m.category))].map((cat) => (
@@ -134,6 +139,11 @@ export default function BrowseFoods() {
           <div className="cards-container">
             {filteredMeals.map((meal) => (
               <Card
+                sx={{
+                  bgcolor: "transparent",
+                  border: "1px solid #ccc",
+                  borderRadius: "12px",
+                }}
                 className="single-card"
                 onClick={() => navigate(`/meal/${meal.id}`)}
               >
@@ -154,15 +164,25 @@ export default function BrowseFoods() {
                     fontWeight="bold"
                     gutterBottom
                     noWrap
+                    sx={{ color: "#fff" }}
                   >
                     {meal.name}
                   </Typography>
                   <Chip
                     label={meal.category}
                     size="small"
-                    sx={{ mb: 1, background: "#48A6A7", color: "#fff" }}
+                    sx={{
+                      mb: 1,
+                      background:
+                        "linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff)",
+                      color: "#fff",
+                    }}
                   />
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ color: "#fff" }}
+                  >
                     <strong>Area:</strong> {meal.area}
                   </Typography>
                   <Typography
@@ -174,6 +194,7 @@ export default function BrowseFoods() {
                       WebkitLineClamp: 3,
                       WebkitBoxOrient: "vertical",
                       overflow: "hidden",
+                      color: "#fff",
                     }}
                   >
                     {meal.instructions}

@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+body.light-mode {
+  background-color: white;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+  transition: all 0.3s ease;
+}

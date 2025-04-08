@@ -36,7 +36,7 @@ const CustomBreadcrumbs = () => {
 
   return (
     <div className="p-4" id="bread-crumbdiv">
-      <Breadcrumbs aria-label="breadcrumb">
+      <Breadcrumbs aria-label="breadcrumb" sx={{ color: "#fff" }}>
         <Link component={RouterLink} underline="hover" color="inherit" to="/">
           Home
         </Link>
@@ -48,9 +48,7 @@ const CustomBreadcrumbs = () => {
         >
           BrowseFoods
         </Link>
-        <Typography color="text.primary">
-          {recipeTitle || "Loading..."}
-        </Typography>
+        <Typography color="#fff">{recipeTitle || "Loading..."}</Typography>
       </Breadcrumbs>
     </div>
   );

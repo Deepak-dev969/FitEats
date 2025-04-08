@@ -68,7 +68,7 @@ export default function RecipeDetails() {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        bgcolor="#f5f5f5"
+        bgcolor="#111"
       >
         <CircularProgress color="primary" size={60} />
       </Box>
@@ -82,7 +82,7 @@ export default function RecipeDetails() {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        bgcolor="#f5f5f5"
+        bgcolor="#111"
       >
         <Typography variant="h6" color="text.secondary">
           Oops! Recipe not found.
@@ -92,9 +92,16 @@ export default function RecipeDetails() {
   }
 
   return (
-    <Box bgcolor="#eaefee" minHeight="100vh" py={6}>
+    <Box bgcolor="#111" minHeight="100vh" py={6}>
       <Container maxWidth="md">
-        <Card sx={{ borderRadius: 4, boxShadow: 5 }}>
+        <Card
+          sx={{
+            borderRadius: 4,
+            boxShadow: 5,
+            bgcolor: "transparent",
+            border: "1px solid #ccc",
+          }}
+        >
           <CardMedia
             component="img"
             height={isMobile ? 200 : 400}
@@ -103,7 +110,12 @@ export default function RecipeDetails() {
             sx={{ objectFit: "cover" }}
           />
           <CardContent>
-            <Typography variant="h4" fontWeight={700} gutterBottom>
+            <Typography
+              variant="h4"
+              fontWeight={700}
+              gutterBottom
+              sx={{ color: "#fff" }}
+            >
               {recipe.title}
             </Typography>
 
@@ -113,10 +125,11 @@ export default function RecipeDetails() {
               fontWeight={600}
               mt={4}
               gutterBottom
+              sx={{ color: "#fff" }}
             >
               Ingredients
             </Typography>
-            <List dense disablePadding>
+            <List dense disablePadding sx={{ color: "#fff" }}>
               {recipe.ingredients.map((item, idx) => (
                 <ListItem key={idx}>
                   <ListItemIcon>
@@ -133,6 +146,7 @@ export default function RecipeDetails() {
               fontWeight={600}
               mt={4}
               gutterBottom
+              sx={{ color: "#fff" }}
             >
               Instructions
             </Typography>
@@ -140,7 +154,7 @@ export default function RecipeDetails() {
               sx={{
                 whiteSpace: "pre-line",
                 lineHeight: 1.8,
-                color: "text.primary",
+                color: "#fff",
               }}
             >
               {recipe.instructions || "No instructions available."}

@@ -15,8 +15,40 @@ export default function Footer() {
         <div className="footer-content">
           <div>
             <Link to="/">
+              <svg
+                width="200"
+                height="60"
+                viewBox="0 0 300 100"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stop-color="#ff5ca4" />
+                    <stop offset="50%" stop-color="#5af3ff" />
+                    <stop offset="100%" stop-color="#5f5eff" />
+                  </linearGradient>
+                </defs>
+                <text
+                  x="0"
+                  y="65"
+                  font-family="Arial, sans-serif"
+                  font-size="60"
+                  font-weight="bold"
+                  fill="url(#gradient)"
+                >
+                  FitEats
+                </text>
+              </svg>
+              {/*
               {" "}
-              <img src={Footerlogo} />
+              <img src={Footerlogo} />*/}
             </Link>
           </div>
           <div className="footer-links">

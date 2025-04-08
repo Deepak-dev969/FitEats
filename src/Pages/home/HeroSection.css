@@ -6,7 +6,7 @@
 #hero-section {
   display: flex;
   flex-direction: row;
-  background: #eaefee;
+  background: #111;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -24,15 +24,19 @@
   font-weight: 700;
   font-size: 4.5rem;
   line-height: 1.1em;
-  color: #303a41;
+  color: #fff;
 }
 .hero-section-content h2 span {
-  color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .hero-section-content p {
   font-family: "Segoe UI";
   font-size: larger;
+  color: #fff;
 }
 .MuiContainer-root {
   display: flex !important;
@@ -55,24 +59,27 @@
   padding: 2vw 5vw;
   justify-content: center;
   height: 100vh;
-  background-color: #eaefee;
+  background: #111;
 }
 .create-meal-plan-div h2 {
   text-align: center;
   font-family: "Segoe UI";
   font-weight: 700;
   font-size: 2.5rem;
-  color: #303a41;
+  color: #fff;
 }
 #call-plan-div {
   height: 60vh;
   width: 60vw;
   border-radius: 15px;
-  background-color: #f2f8fc;
+  background: #111;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #fff;
+  border: 1px solid #ddd;
 }
+
 .MuiBox-root {
   display: flex !important;
   flex-direction: column;
@@ -88,7 +95,7 @@
   font-family: "Segoe UI";
   font-weight: 700;
   font-size: 2.5rem;
-  color: #303a41;
+  color: #fff;
 }
 .app-play-div {
   gap: 12vw;

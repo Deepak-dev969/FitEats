@@ -5,7 +5,7 @@
   flex-direction: column;
   padding: 2vw 10vw;
   position: relative;
-  background-color: #eaefee;
+  background-color: #111;
 }
 /*
 .BrandImgdiv {
@@ -31,7 +31,10 @@
   background-color: transparent;
   border: none;
   text-decoration: none;
-  color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   font-weight: 400;
   position: relative;
   padding-bottom: 4px;
@@ -44,7 +47,7 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
   transition: width 0.3s ease-in-out;
 }
 
@@ -62,14 +65,17 @@
 #SignInBtn {
   padding: 0;
   font-size: 0.7vw;
-  color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 #SignInBtn:hover {
   text-decoration: underline;
 }
 #SignUpBtn {
   font-family: "Segoe UI";
-  background-color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
   color: #fff;
   padding: 0.7vw 2.1vw;
   border-radius: 8px;

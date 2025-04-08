@@ -30,7 +30,7 @@ const ContactForm = () => {
     <Box
       sx={{
         minHeight: "100vh",
-        background: "#eaefee",
+        background: "#111",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -124,11 +124,12 @@ const ContactForm = () => {
                 fontWeight: "bold",
                 fontSize: "16px",
                 borderRadius: "30px",
-                background: "#48A6A7",
+                background: "linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff)",
                 boxShadow: "0 6px 25px rgba(106, 17, 203, 0.35)",
                 transition: "0.7s",
                 "&:hover": {
-                  background: "#48A6A7",
+                  background:
+                    "linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff)",
                 },
               }}
             >
@@ -159,7 +160,7 @@ const ContactForm = () => {
           />
           <Typography
             sx={{
-              color: "#48A6A7",
+              color: "#111",
               display: "flex",
               alignItems: "center",
               textAlign: "left",
@@ -174,7 +175,7 @@ const ContactForm = () => {
           <Typography
             sx={{
               fontFamily: "Segoe UI",
-              color: "#48A6A7",
+              color: "#111",
               display: "flex",
               textAlign: "left",
               alignItems: "center",
@@ -187,7 +188,7 @@ const ContactForm = () => {
           <Typography
             sx={{
               fontFamily: "Segoe UI",
-              color: "#48A6A7",
+              color: "#111",
               display: "flex",
               textAlign: "left",
               alignItems: "center",

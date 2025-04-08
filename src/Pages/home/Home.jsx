@@ -3,7 +3,7 @@ import "../../Pages/home/HeroSection.css";
 import HeroImage from "../../assets/Media//HeroSectionImg.png";
 import Container from "@mui/material/Container";
 import Tab from "../home/HomePgeTab";
-import SelectField from "./SelectField";
+//import SelectField from "./SelectField";
 //import AppStoreIcon from "../../assets/Media/download-on-the-app-store-apple-logo.svg";
 //import PlayStorIcon from "../../assets/Media/google-play-badge-logo.svg";
 
@@ -41,7 +41,7 @@ export default function SimpleContainer() {
         <div id="call-plan-div">
           <h4>Preferred Diet</h4>
           <Tab />
-          <SelectField />
+          {/*<SelectField />*/}
         </div>
       </div>
 
