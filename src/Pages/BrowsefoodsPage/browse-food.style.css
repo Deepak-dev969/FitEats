@@ -1,0 +1,65 @@
+/*#Browse-Foods-Wrapper { 
+  background: #eaefee;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.Heading-Browse-foods {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.meal-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+*/
+#Browse-Foods-Wrapper {
+  background: #eaefee;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+.Heading-Browse-foods {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.meal-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.meal-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.single-card {
+  min-width: 360px;
+  width: 360px;
+}

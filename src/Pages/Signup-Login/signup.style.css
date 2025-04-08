@@ -1,0 +1,39 @@
+.signup-wrapper {
+  width: 100vw;
+  background: #eaefee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vw 5vw 5vw 5vw;
+}
+
+.signup-card {
+  padding: 2.5rem;
+  border-radius: 66px;
+  background-color: white;
+}
+
+.link {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-buttons {
+  justify-content: space-between;
+  display: flex;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.social-buttons button {
+  width: 42%;
+  text-transform: none;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+}
+.social-buttons button:hover {
+  color: #fff;
+  background-color: #48a6a7;
+}

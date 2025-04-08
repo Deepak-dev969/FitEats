@@ -1,0 +1,136 @@
+#diet-plan-wrapper {
+  width: 100%;
+  padding: 0vw 5vw;
+  background-color: #eaefee;
+}
+.Diet-Plan-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0vw 0vw 0vw 6vw;
+  background-color: #eaefee;
+}
+
+.hero-section-para {
+  display: flex;
+  width: 90%;
+  gap: 60px;
+  padding-bottom: 2vw;
+  /* background-color: aquamarine;*/
+}
+.Diet-Plan-content h1 {
+  font-family: "Segoe UI";
+  font-weight: 700;
+  font-size: 2.8em;
+}
+.Diet-Plan-content p {
+  font-family: "Segoe UI";
+  color: #4b3a41;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+.hero-section-para img {
+  height: 200px;
+  width: 200px;
+}
+.hero-section-imgdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Diet-Plan-Section {
+  width: 90%;
+  padding-bottom: 4vw;
+  text-align: center;
+}
+.Diet-Plan-Section h3 {
+  font-family: "Segoe UI";
+  font-weight: 700;
+  font-size: 1.8em;
+  text-align: center;
+}
+.Diet-Plan-Section ul li {
+  font-family: "Segoe UI";
+  line-height: 2em;
+}
+.BtndDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+}
+#Learn-More-Btn {
+  width: 100%;
+  border: #48a6a7 1px solid;
+  color: #48a6a7;
+  padding: 0.5vw 1.7vw;
+  transition: ease-in-out 0.3s;
+}
+#Learn-More-Btn:hover {
+  background-color: #41797a;
+  color: #fff;
+}
+#Learn-More-Btn:active {
+  transform: scale(0.85);
+}
+#Start-Free-Btn {
+  width: 100%;
+  background-color: #48a6a7;
+  color: #ffffff;
+  padding: 0.5vw 1.7vw;
+  transition: ease-in-out 0.3s;
+}
+#Start-Free-Btn:hover {
+  background-color: #41797a;
+  color: #fff;
+}
+#Start-Free-Btn:active {
+  transform: scale(0.85);
+}
+
+.container {
+  max-width: 900px;
+  margin: 10px auto;
+  text-align: center;
+}
+.heading {
+  background-color: #48a6a7;
+  color: #fff;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.diet-card {
+  background-color: #eef6ff;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.diet-card img {
+  width: 40px;
+  height: 40px;
+}
+.diet-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #48a6a7;
+}
+.diet-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}

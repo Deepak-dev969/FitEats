@@ -1,0 +1,87 @@
+#Header {
+  display: flex;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  padding: 2vw 10vw;
+  position: relative;
+  background-color: #eaefee;
+}
+/*
+.BrandImgdiv {
+  width: 20vw;
+}
+  */
+.BrandImgdiv img {
+  object-fit: contain;
+  width: 10em;
+  height: 2em;
+}
+/*
+.MenuOptions {
+  width: 45vw;
+}*/
+#NavLinks {
+  position: relative;
+  overflow: hidden;
+}
+
+#NavLinks a {
+  font-family: "Segoe UI";
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: #48a6a7;
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+#NavLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #48a6a7;
+  transition: width 0.3s ease-in-out;
+}
+
+#NavLinks a:hover::after {
+  width: 100%;
+}
+
+#ContactBtnDiv {
+  gap: 0.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#SignInBtn {
+  padding: 0;
+  font-size: 0.7vw;
+  color: #48a6a7;
+}
+#SignInBtn:hover {
+  text-decoration: underline;
+}
+#SignUpBtn {
+  font-family: "Segoe UI";
+  background-color: #48a6a7;
+  color: #fff;
+  padding: 0.7vw 2.1vw;
+  border-radius: 8px;
+  transition: 0.4s ease-in-out;
+}
+#SignUpBtn a {
+  color: #fff;
+  text-decoration: none;
+}
+#SignUpBtn:hover {
+  background-color: #41797a;
+  transform: scale(0.95);
+  cursor: pointer;
+  text-decoration: underline;
+}
