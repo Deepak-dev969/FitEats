@@ -68,22 +68,67 @@
   gap: 30px;
 }
 #Learn-More-Btn {
-  width: 100%;
-  border: #48a6a7 1px solid;
-  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #fff;
-
-  padding: 0.5vw 1.7vw;
-  transition: ease-in-out 0.3s;
-}
-#Learn-More-Btn:hover {
-  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
+  position: relative;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #111;
   color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
+
+#Learn-More-Btn::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background: conic-gradient(from 0deg, #ff5ca4, #5af3ff, #5f5eff, #ff5ca4);
+  border-radius: inherit;
+  z-index: -2;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+  opacity: 0;
+}
+
+#Learn-More-Btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background-color: #111;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+#Learn-More-Btn:hover::before {
+  animation: spin 2s linear infinite;
+  opacity: 1;
+}
+
+#Learn-More-Btn:hover {
+  background-color: #41797a;
+  transform: scale(0.95);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 #Learn-More-Btn:active {
-  transform: scale(0.85);
+  transform: scale(0.95);
 }
+
+/* Rotation Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #Start-Free-Btn {
   width: 100%;
   background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
@@ -133,7 +178,10 @@
 .diet-info h3 {
   margin: 0;
   font-size: 16px;
-  color: #48a6a7;
+  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 .diet-info p {
   margin: 5px 0 0;

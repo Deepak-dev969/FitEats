@@ -104,7 +104,20 @@ export default function BrowseFoods() {
               onChange={(e) => setCategory(e.target.value)}
               variant="outlined"
               size="small"
-              sx={{ minWidth: 150, color: "#fff", borderColor: "#fff" }}
+              sx={{
+                minWidth: 150,
+                color: "#fff",
+                background: "transparent",
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#fff",
+                },
+                "&:hover .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#fff",
+                },
+                "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#fff",
+                },
+              }}
             >
               <MenuItem value="All Meals">All Meals</MenuItem>
               {[...new Set(meals.map((m) => m.category))].map((cat) => (
@@ -120,6 +133,26 @@ export default function BrowseFoods() {
               size="small"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#fff",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "#fff",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#fff",
+                  },
+                  color: "#fff",
+                },
+                "& .MuiInputLabel-root": {
+                  color: "#fff",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "#fff",
+                },
+              }}
             />
           </Box>
         </div>

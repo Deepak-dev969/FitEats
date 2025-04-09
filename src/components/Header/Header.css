@@ -74,13 +74,65 @@
   text-decoration: underline;
 }
 #SignUpBtn {
-  font-family: "Segoe UI";
-  background: linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff);
+  position: relative;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #111;
   color: #fff;
-  padding: 0.7vw 2.1vw;
-  border-radius: 8px;
-  transition: 0.4s ease-in-out;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
+
+#SignUpBtn::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background: conic-gradient(from 0deg, #ff5ca4, #5af3ff, #5f5eff, #ff5ca4);
+  border-radius: inherit;
+  z-index: -2;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+  opacity: 0;
+}
+
+#SignUpBtn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background-color: #111;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+#SignUpBtn:hover::before {
+  animation: spin 2s linear infinite;
+  opacity: 1;
+}
+
+#SignUpBtn:hover {
+  color: #ff5ca4;
+  transform: scale(1.05);
+}
+
+#SignUpBtn:active {
+  transform: scale(0.95);
+}
+
+/* Rotation Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #SignUpBtn a {
   color: #fff;
   text-decoration: none;

@@ -42,21 +42,22 @@ const ContactForm = () => {
         elevation={10}
         sx={{
           borderRadius: "40px",
+          border: "1px solid #e0e0e0",
           width: "100%",
           maxWidth: 1100,
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
-          backgroundColor: "#ffffff",
+          backgroundColor: "transparent",
           overflow: "hidden",
           boxShadow: "0 10px 40px rgba(0, 0, 0, 0.1)",
         }}
       >
-        <Box sx={{ flex: 1, p: { xs: 4, md: 6 } }}>
+        <Box sx={{ background: "transparent", flex: 1, p: { xs: 4, md: 6 } }}>
           <Typography
             variant="h4"
             sx={{
               fontWeight: "bold",
-              color: "#3f3d56",
+              color: "#fff",
               mb: 1,
               width: "30vw",
               fontFamily: "Segoe UI",
@@ -64,7 +65,7 @@ const ContactForm = () => {
           >
             Let’s talk
           </Typography>
-          <Typography sx={{ color: "#6f6f6f", mb: 4, fontFamily: "Segoe UI" }}>
+          <Typography sx={{ color: "#f5f5f5", mb: 4, fontFamily: "Segoe UI" }}>
             Have questions, feedback or just want to say hello? Fill out the
             form below and we’ll get back to you soon.
           </Typography>
@@ -78,9 +79,27 @@ const ContactForm = () => {
               value={formData.name}
               onChange={handleChange}
               sx={{
-                backgroundColor: "#f5f8ff",
+                backgroundColor: "transparent",
                 borderRadius: 2,
                 "& fieldset": { border: "1px solid #e0e0e0" },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#fff",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "#fff",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#fff",
+                  },
+                  color: "#fff",
+                },
+                "& .MuiInputLabel-root": {
+                  color: "#fff",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "#fff",
+                },
               }}
             />
             <TextField
@@ -93,9 +112,27 @@ const ContactForm = () => {
               value={formData.email}
               onChange={handleChange}
               sx={{
-                backgroundColor: "#f5f8ff",
+                backgroundColor: "transparent",
                 borderRadius: 2,
                 "& fieldset": { border: "1px solid #e0e0e0" },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#fff",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "#fff",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#fff",
+                  },
+                  color: "#fff",
+                },
+                "& .MuiInputLabel-root": {
+                  color: "#fff",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "#fff",
+                },
               }}
             />
             <TextField
@@ -109,12 +146,31 @@ const ContactForm = () => {
               value={formData.message}
               onChange={handleChange}
               sx={{
-                backgroundColor: "#f5f8ff",
+                backgroundColor: "transparent",
                 borderRadius: 2,
                 "& fieldset": { border: "1px solid #e0e0e0" },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderColor: "#fff",
+                  },
+                  "&:hover fieldset": {
+                    borderColor: "#fff",
+                  },
+                  "&.Mui-focused fieldset": {
+                    borderColor: "#fff",
+                  },
+                  color: "#fff",
+                },
+                "& .MuiInputLabel-root": {
+                  color: "#fff",
+                },
+                "& .MuiInputLabel-root.Mui-focused": {
+                  color: "#fff",
+                },
               }}
             />
             <Button
+              id="Learn-More-Btn"
               type="submit"
               variant="contained"
               fullWidth
@@ -146,7 +202,7 @@ const ContactForm = () => {
             justifyContent: "center",
             alignItems: "flex-start",
             p: { xs: 4, md: 6 },
-            background: "#fafafa",
+            background: "transparent",
           }}
         >
           <img
@@ -160,7 +216,7 @@ const ContactForm = () => {
           />
           <Typography
             sx={{
-              color: "#111",
+              color: "#fff",
               display: "flex",
               alignItems: "center",
               textAlign: "left",
@@ -175,7 +231,7 @@ const ContactForm = () => {
           <Typography
             sx={{
               fontFamily: "Segoe UI",
-              color: "#111",
+              color: "#fff",
               display: "flex",
               textAlign: "left",
               alignItems: "center",
@@ -188,7 +244,7 @@ const ContactForm = () => {
           <Typography
             sx={{
               fontFamily: "Segoe UI",
-              color: "#111",
+              color: "#fff",
               display: "flex",
               textAlign: "left",
               alignItems: "center",

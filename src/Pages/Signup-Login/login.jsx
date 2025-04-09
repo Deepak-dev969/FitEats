@@ -57,18 +57,28 @@ const Login = () => {
         maxWidth="sm"
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Paper elevation={12} className="login-card">
+        <Paper
+          elevation={12}
+          className="login-card"
+          sx={{ background: "transparent" }}
+        >
           <Typography
             variant="h4"
             align="center"
             gutterBottom
             fontWeight="bold"
+            sx={{ ml: 1, color: "#fff" }}
           >
             Welcome Back 👋
           </Typography>
-          <Typography variant="body2" align="center" mb={3}>
+          <Typography
+            variant="body2"
+            align="center"
+            mb={3}
+            sx={{ ml: 1, color: "#fff" }}
+          >
             New here?{" "}
-            <Link href="/Signup" underline="hover" color="#48A6A7">
+            <Link href="/Signup" underline="hover" color="#1976d2">
               Create an account
             </Link>
           </Typography>
@@ -82,6 +92,32 @@ const Login = () => {
                 name="email"
                 value={loginData.email}
                 onChange={handleChange}
+                sx={{
+                  borderRadius: 2,
+                  "& .MuiOutlinedInput-root": {
+                    backgroundColor: "transparent",
+                    color: "#fff",
+                    "& input": {
+                      backgroundColor: "transparent",
+                      color: "#fff",
+                    },
+                    "& fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#fff",
+                    },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "#fff",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#fff",
+                  },
+                }}
               />
               <TextField
                 fullWidth
@@ -94,15 +130,46 @@ const Login = () => {
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
-                      <IconButton onClick={togglePasswordVisibility} edge="end">
+                      <IconButton
+                        onClick={togglePasswordVisibility}
+                        edge="end"
+                        sx={{ color: "#fff" }}
+                      >
                         {showPassword ? <VisibilityOff /> : <Visibility />}
                       </IconButton>
                     </InputAdornment>
                   ),
                 }}
+                sx={{
+                  borderRadius: 2,
+                  "& .MuiOutlinedInput-root": {
+                    backgroundColor: "transparent",
+                    color: "#fff",
+                    "& input": {
+                      backgroundColor: "transparent",
+                      color: "#fff",
+                    },
+                    "& fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#fff",
+                    },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "#fff",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#fff",
+                  },
+                }}
               />
 
               <Button
+                id="Learn-More-Btn"
                 type="submit"
                 fullWidth
                 variant="contained"
@@ -113,8 +180,13 @@ const Login = () => {
                   bgcolor: "#48A6A7",
                   fontWeight: "bold",
                   fontSize: "1rem",
+                  transition: "background 0.9s ease",
+                  background:
+                    "linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff)",
                   "&:hover": {
-                    backgroundColor: "#3e9596",
+                    background:
+                      "linear-gradient(90deg,#5f5eff, #ff5ca4, #5af3ff)",
+                    opacity: 0.9,
                   },
                 }}
               >
@@ -122,7 +194,7 @@ const Login = () => {
               </Button>
 
               <Box textAlign="center">
-                <Link href="#" underline="hover" color="text.secondary">
+                <Link href="#" underline="hover" color="#fff">
                   Forgot your password?
                 </Link>
               </Box>
@@ -135,14 +207,14 @@ const Login = () => {
             variant="caption"
             display="block"
             align="center"
-            color="text.secondary"
+            color="#fff"
           >
             By logging in, you agree to our{" "}
-            <Link href="#" underline="hover" color="text.primary">
+            <Link href="#" underline="hover" color="#1976d2">
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link href="#" underline="hover" color="text.primary">
+            <Link href="#" underline="hover" color="#1976d2">
               Privacy Policy
             </Link>
             .

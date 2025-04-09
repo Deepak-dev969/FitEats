@@ -145,11 +145,30 @@ const Signup = () => {
         maxWidth="sm"
         sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
       >
-        <Paper elevation={6} sx={{ borderRadius: 4, p: 4, width: "100%" }}>
-          <Typography variant="h4" align="center" gutterBottom>
+        <Paper
+          elevation={6}
+          sx={{
+            borderRadius: 4,
+            p: 4,
+            width: "100%",
+            background: "transparent",
+            border: "1px solid #ccc",
+          }}
+        >
+          <Typography
+            variant="h4"
+            align="center"
+            gutterBottom
+            sx={{ color: "#fff" }}
+          >
             Create Your Account
           </Typography>
-          <Typography variant="body2" align="center" mb={3}>
+          <Typography
+            variant="body2"
+            align="center"
+            mb={3}
+            sx={{ color: "#fff" }}
+          >
             Already have an account?{" "}
             <Link href="/login" underline="hover">
               Log In
@@ -165,6 +184,32 @@ const Signup = () => {
                 onChange={handleChange}
                 error={!!errors.username}
                 helperText={errors.username || " "}
+                sx={{
+                  borderRadius: 2,
+                  "& .MuiOutlinedInput-root": {
+                    backgroundColor: "transparent",
+                    color: "#fff",
+                    "& input": {
+                      backgroundColor: "transparent !important",
+                      color: "#fff",
+                    },
+                    "& fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#fff",
+                    },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "#fff",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#fff",
+                  },
+                }}
               />
               <TextField
                 fullWidth
@@ -175,6 +220,30 @@ const Signup = () => {
                 onChange={handleChange}
                 error={!!errors.email}
                 helperText={errors.email || " "}
+                sx={{
+                  backgroundColor: "transparent",
+                  borderRadius: 2,
+                  "& fieldset": { border: "1px solid #fff" },
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      backgroundColor: "transparent",
+                      borderColor: "#fff",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#fff",
+                    },
+                    color: "#fff",
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "#fff",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#fff",
+                  },
+                }}
               />
               <TextField
                 fullWidth
@@ -191,11 +260,38 @@ const Signup = () => {
                       <IconButton
                         onClick={() => setShowPassword((prev) => !prev)}
                         edge="end"
+                        sx={{ color: `#fff` }}
                       >
                         {showPassword ? <VisibilityOff /> : <Visibility />}
                       </IconButton>
                     </InputAdornment>
                   ),
+                }}
+                sx={{
+                  borderRadius: 2,
+                  "& .MuiOutlinedInput-root": {
+                    backgroundColor: "transparent",
+                    color: "#fff",
+                    "& input": {
+                      backgroundColor: "transparent",
+                      color: "#fff",
+                    },
+                    "& fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#fff",
+                    },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "#fff",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#fff",
+                  },
                 }}
               />
               <TextField
@@ -213,6 +309,7 @@ const Signup = () => {
                       <IconButton
                         onClick={() => setShowConfirmPassword((prev) => !prev)}
                         edge="end"
+                        sx={{ color: `#fff` }}
                       >
                         {showConfirmPassword ? (
                           <VisibilityOff />
@@ -223,6 +320,30 @@ const Signup = () => {
                     </InputAdornment>
                   ),
                 }}
+                sx={{
+                  backgroundColor: "transparent",
+                  borderRadius: 2,
+                  "& fieldset": { border: "1px solid #fff" },
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      backgroundColor: "transparent",
+                      borderColor: "#fff",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#fff",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#fff",
+                    },
+                    color: "#fff",
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "#fff",
+                  },
+                  "& .MuiInputLabel-root.Mui-focused": {
+                    color: "#fff",
+                  },
+                }}
               />
               <FormControlLabel
                 control={
@@ -230,14 +351,21 @@ const Signup = () => {
                     name="agreeToTerms"
                     checked={formData.agreeToTerms}
                     onChange={handleChange}
+                    sx={{
+                      color: "#fff",
+                      "&.Mui-checked": {
+                        color: "#fff",
+                      },
+                    }}
                   />
                 }
                 label={
-                  <>
+                  <Typography sx={{ color: "#fff" }}>
                     I agree to the{" "}
                     <Link
                       href="#"
                       underline="hover"
+                      sx={{ color: "#1976d2f" }}
                       onClick={(e) => {
                         e.preventDefault();
                         setOpenTermsDialog(true);
@@ -245,7 +373,7 @@ const Signup = () => {
                     >
                       Terms of Service
                     </Link>
-                  </>
+                  </Typography>
                 }
               />
               <div style={{ minHeight: "20px" }}>
@@ -261,23 +389,50 @@ const Signup = () => {
                     name="subscribe"
                     checked={formData.subscribe}
                     onChange={handleChange}
+                    sx={{
+                      color: "#fff",
+                      "&.Mui-checked": {
+                        color: "#fff",
+                      },
+                    }}
                   />
                 }
-                label="Send me a once-a-week email with meal ideas"
+                label={
+                  <Typography sx={{ color: "#fff" }}>
+                    Send me a once-a-week email with meal ideas
+                  </Typography>
+                }
               />
               <div style={{ minHeight: "20px" }}>
                 {errors.subscribe && (
-                  <Typography variant="caption" color="error" sx={{ ml: 1 }}>
+                  <Typography
+                    variant="caption"
+                    color="error"
+                    sx={{ ml: 1, color: "#fff" }}
+                  >
                     {errors.subscribe}
                   </Typography>
                 )}
               </div>
+
               <Button
                 type="submit"
                 variant="contained"
                 fullWidth
+                id="Learn-More-Btn"
                 disabled={!isFormValid()}
-                sx={{ borderRadius: "15px", bgcolor: "#48A6A7", py: 1.2 }}
+                sx={{
+                  borderRadius: "15px",
+                  background:
+                    "linear-gradient(90deg, #ff5ca4, #5af3ff, #5f5eff)",
+                  py: 1.2,
+                  color: "#fff",
+                  "&:hover": {
+                    background:
+                      "linear-gradient(90deg, #5f5eff, #ff5ca4, #5af3ff)",
+                    opacity: 0.9,
+                  },
+                }}
               >
                 Create Account
               </Button>

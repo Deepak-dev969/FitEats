@@ -70,16 +70,30 @@ export default function BMICalculator() {
     <div className="bmi-wrapper">
       <CssBaseline />
       <Container maxWidth="sm">
-        <Paper elevation={12} className="bmi-card">
+        <Paper
+          elevation={12}
+          className="bmi-card"
+          sx={{ background: "transparent", border: "1px solid #ccc" }}
+        >
           <Typography
             variant="h4"
             gutterBottom
             align="center"
+            display="flex"
+            justifyContent="center"
             fontWeight="bold"
+            sx={{ color: "#fff" }}
           >
             <MonitorWeightIcon
               fontSize="large"
-              sx={{ color: "#48A6A7", mr: 1 }}
+              sx={{
+                color: "#48A6A7",
+                mr: 1,
+                align: "center",
+                display: "flex",
+                justifyContent: "center",
+                fontWeight: "bold",
+              }}
             />
             BMI Calculator
           </Typography>
@@ -93,7 +107,28 @@ export default function BMICalculator() {
             value={weight}
             onChange={handleWeightChange}
             inputProps={{ min: 0 }}
+            sx={{
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "#fff",
+                },
+                "&:hover fieldset": {
+                  borderColor: "#fff",
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "#fff",
+                },
+                color: "#fff",
+              },
+              "& .MuiInputLabel-root": {
+                color: "#fff",
+              },
+              "& .MuiInputLabel-root.Mui-focused": {
+                color: "#fff",
+              },
+            }}
           />
+
           <TextField
             label="Height (cm)"
             fullWidth
@@ -103,9 +138,30 @@ export default function BMICalculator() {
             value={height}
             onChange={handleHeightChange}
             inputProps={{ min: 0 }}
+            sx={{
+              "& .MuiOutlinedInput-root": {
+                "& fieldset": {
+                  borderColor: "#fff",
+                },
+                "&:hover fieldset": {
+                  borderColor: "#fff",
+                },
+                "&.Mui-focused fieldset": {
+                  borderColor: "#fff",
+                },
+                color: "#fff",
+              },
+              "& .MuiInputLabel-root": {
+                color: "#fff",
+              },
+              "& .MuiInputLabel-root.Mui-focused": {
+                color: "#fff",
+              },
+            }}
           />
 
           <Button
+            id="Learn-More-Btn"
             variant="contained"
             fullWidth
             onClick={calculateBMI}
@@ -114,9 +170,20 @@ export default function BMICalculator() {
               py: 1.5,
               fontWeight: "bold",
               fontSize: "1rem",
-              bgcolor: "#48A6A7",
-              borderRadius: "25px",
-              "&:hover": { bgcolor: "#3d9596" },
+              backgroundColor: "#111",
+              borderRadius: "12px",
+              color: "#fff",
+              position: "relative",
+              overflow: "hidden",
+              zIndex: 1,
+              transition: "color 0.3s ease, transform 0.2s ease",
+              "&:hover": {
+                transform: "scale(0.95)",
+                textDecoration: "underline",
+              },
+              "&:active": {
+                transform: "scale(0.95)",
+              },
             }}
           >
             Calculate
@@ -124,7 +191,9 @@ export default function BMICalculator() {
 
           {bmi && (
             <Box mt={4} textAlign="center">
-              <Typography variant="h6">Your BMI: {bmi}</Typography>
+              <Typography variant="h6" sx={{ color: "#fff" }}>
+                Your BMI: {bmi}
+              </Typography>
               <Typography
                 variant="subtitle1"
                 sx={{
@@ -134,6 +203,7 @@ export default function BMICalculator() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  color: "#fff",
                 }}
               >
                 Category: {category}
